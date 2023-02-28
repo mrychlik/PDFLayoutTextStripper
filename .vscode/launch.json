@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "java",
             "request": "attach",
@@ -30,5 +31,20 @@
             "request": "launch",
             "mainClass": "${file}"
         }
-    ]
+    ],
+    "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-1.8",
+          "path": "/path/to/jdk-8",
+        },
+        {
+          "name": "JavaSE-11",
+          "path": "/path/to/jdk-11",
+        },
+        {
+          "name": "JavaSE-19",
+          "path": "/path/to/jdk-19",
+          "default": true
+        },
+      ]
 }
