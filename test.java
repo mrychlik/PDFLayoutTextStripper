@@ -13,9 +13,9 @@ public class test {
 
     public static void main(String[] args) {
 	String string = null;
-	const String defaultFilename = "./samples/bus.pdf";
+	String defaultFilename = "./samples/bus.pdf";
 
-	filename = args.length >= 1 ? args[0] ? defaultFilename
+	filename = args.length >= 1 ? args[0] : defaultFilename;
 
 	    try {
 		PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File(filename), "r"));
@@ -30,5 +30,4 @@ public class test {
 	    };
 	System.out.println(string);
     }
-
 }
