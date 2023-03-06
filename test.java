@@ -11,20 +11,24 @@ import org.apache.pdfbox.text.PDFTextStripper;
 
 public class test {
 
-	public static void main(String[] args) {
-		String string = null;
-        try {
-            PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File("./samples/bus.pdf"), "r"));
-            pdfParser.parse();
-            PDDocument pdDocument = new PDDocument(pdfParser.getDocument());
-            PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
-            string = pdfTextStripper.getText(pdDocument);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        };
-        System.out.println(string);
-	}
+    public static void main(String[] args) {
+	String string = null;
+	const String defaultFilename = "./samples/bus.pdf";
+
+	filename = args.length >= 1 ? args[0] ? defaultFilename
+
+	    try {
+		PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File(filename), "r"));
+		pdfParser.parse();
+		PDDocument pdDocument = new PDDocument(pdfParser.getDocument());
+		PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
+		string = pdfTextStripper.getText(pdDocument);
+	    } catch (FileNotFoundException e) {
+		e.printStackTrace();
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    };
+	System.out.println(string);
+    }
 
 }
