@@ -15,7 +15,7 @@ public class test {
 	String string = null;
 	String defaultFilename = "./samples/bus.pdf";
 
-	filename = args.length >= 1 ? args[0] : defaultFilename;
+	String filename = args.length >= 1 ? args[0] : defaultFilename;
 
 	    try {
 		PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File(filename), "r"));
