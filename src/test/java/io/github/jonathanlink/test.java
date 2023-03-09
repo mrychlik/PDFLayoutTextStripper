@@ -36,5 +36,6 @@ public class test extends TestCase {
 	    e.printStackTrace();
 	}
 	System.out.println(string);
+	assertTrue(false);
     }
 }
