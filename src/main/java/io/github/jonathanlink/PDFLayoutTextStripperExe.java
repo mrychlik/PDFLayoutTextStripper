@@ -16,7 +16,7 @@ public class PDFLayoutTextStripperExe {
      */
     public static void main(String[] args) {
 		final String tablePDF = "samples/bus.pdf";
-		prog.parsePDF(tablePDF);
+		PDFLayoutTextStripperExe.parsePDF(tablePDF);
     }
 
     protected void parsePDF(String filename) {
