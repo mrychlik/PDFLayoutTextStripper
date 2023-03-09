@@ -28,7 +28,7 @@ public class PDFLayoutTextStripperTest {
      * Parse a tabular form
      */
     @Test
-    public void parseTable() {
+    public void parseForm() {
 	this.parsePDF(formPDF);
     }
 
