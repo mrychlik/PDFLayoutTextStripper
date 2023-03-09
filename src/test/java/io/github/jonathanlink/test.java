@@ -9,9 +9,10 @@ import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
-import junit.framework.TestCase;
+//import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 
-public class test extends TestCase {
+public class PDFLayoutTextStripperTest {
     String tablePDF;
 
     protected void setUp() {
@@ -21,6 +22,7 @@ public class test extends TestCase {
     /**
      * Test parsing bus schedule
      */
+    @Test
     protected void testTable() {
 	String string = null;
 	String filename = tablePDF;
