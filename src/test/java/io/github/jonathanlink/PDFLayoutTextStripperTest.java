@@ -17,11 +17,19 @@ public class PDFLayoutTextStripperTest {
     String formPDF = "samples/form.pdf";
 
     /**
-     * Test parsing bus schedule
+     * Parse a bus schedule
      */
     @Test
     public void parseTable() {
 	this.parsePDF(tablePDF);
+    }
+
+    /**
+     * Parse a tabular form
+     */
+    @Test
+    public void parseTable() {
+	this.parsePDF(formPDF);
     }
 
     protected void parsePDF(String filename) {
