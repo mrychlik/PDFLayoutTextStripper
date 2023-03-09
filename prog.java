@@ -8,10 +8,13 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 public class prog {
-    String tablePDF = "samples/bus.pdf";
 
-    public static void main(String args[]) {
-	this.parsePDF(tablePDF);
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+		final String tablePDF = "samples/bus.pdf";
+		prog.parsePDF(tablePDF);
     }
 
     protected void parsePDF(String filename) {
