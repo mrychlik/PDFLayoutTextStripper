@@ -13,19 +13,19 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import org.junit.jupiter.api.Test;
 
 public class PDFLayoutTextStripperTest {
-    String tablePDF;
-
-    protected void setUp() {
-	tablePDF = "../../../../../../samples/bus.pdf";
-    }
+    String tablePDF = "samples/bus.pdf";
+    String formPDF = "samples/form.pdf";
 
     /**
      * Test parsing bus schedule
      */
     @Test
     public void parseTable() {
+	this.parsePDF(tablePDF);
+    }
+
+    protected void parsePDF(String filename) {
 	String string = null;
-	String filename = tablePDF;
 	try {
 	    PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File(filename), "r"));
 	    pdfParser.parse();
@@ -37,6 +37,6 @@ public class PDFLayoutTextStripperTest {
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
-	System.out.println(string);
-    }
+    System.out.println(string);
+}
 }
