@@ -2,6 +2,9 @@
 
 Converts a PDF file into a text file while keeping the layout of the original PDF. Useful to extract the content from a table or a form in a PDF file. PDFLayoutTextStripper is a subclass of PDFTextStripper class (from the [Apache PDFBox](https://pdfbox.apache.org/) library).
 
+## About this fork
+This is a fork of the original project by Jonathan Link, with the goal of extending capabilities and adding unit tests.
+
 ## Use cases
 Data extraction from a table in a PDF file
 ![example](sample.png)
