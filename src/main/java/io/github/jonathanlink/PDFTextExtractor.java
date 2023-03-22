@@ -26,7 +26,6 @@ class PDFTextExtractor {
 		pages.add(pageOfText);
 	    }
 	    pdDocument.close();
-	    return string;
 	} catch (FileNotFoundException e) {
 	    e.printStackTrace();
 	} catch (IOException e) {
