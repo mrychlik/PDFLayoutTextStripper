@@ -15,7 +15,7 @@ class PDFTextExtractor {
 	try {
 	    PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File(filename), "r"));
 	    pdfParser.parse();
-	    PDDocument pdDocument = new PDDocument(pdfParser.getDocument());
+	    PDDocument pdDocument = pdfParser.getPDDocument();
 	    PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
 	    string = pdfTextStripper.getText(pdDocument);
 	    pdDocument.close();
