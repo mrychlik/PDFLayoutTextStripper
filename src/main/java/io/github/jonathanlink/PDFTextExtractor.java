@@ -8,7 +8,6 @@ import org.apache.pdfbox.io.RandomAccessFile;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
-import io.github.jonathanlink.PDFLayoutTextStripper;
 
 class PDFTextExtractor {
     public static java.lang.String parsePDF(String filename) {
