@@ -14,16 +14,14 @@ class PDFTextExtractor {
 	String string = null;
 	try { 
 	    RandomAccessFile file = new RandomAccessFile(new File(filename), "r");
-	    try {
-		PDFParser pdfParser = new PDFParser(file);
-		pdfParser.parse();
-		PDDocument pdDocument = pdfParser.getPDDocument();
-		PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
-		string = pdfTextStripper.getText(pdDocument);
-	    } catch (IOException e) {
-		e.printStackTrace();
-	    }
+	    PDFParser pdfParser = new PDFParser(file);
+	    pdfParser.parse();
+	    PDDocument pdDocument = pdfParser.getPDDocument();
+	    PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
+	    string = pdfTextStripper.getText(pdDocument);
 	} catch (FileNotFoundException e) {
+	    e.printStackTrace();
+	} catch (IOException e) {
 	    e.printStackTrace();
 	}
 
