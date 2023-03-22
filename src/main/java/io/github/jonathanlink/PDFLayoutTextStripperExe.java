@@ -7,11 +7,11 @@ public class PDFLayoutTextStripperExe {
      * @param args
      */
     public static void main(String[] args) {
-		final String tablePDF = "samples/bus.pdf";
-		PDFTextExtractor pdfTextExtractor = new PDFTextExtractor();
-		ArrayList<String> pages = pdfTextExtractor.parsePDF(tablePDF);
-		for (int p = 0; p < pages.length; p++) {
-			System.out.println(pages[p]);
-		}
+	final String tablePDF = "samples/bus.pdf";
+	PDFTextExtractor pdfTextExtractor = new PDFTextExtractor();
+	List<String> pages = pdfTextExtractor.parsePDF(tablePDF);
+	for (int p = 0; p < pages.size(); p++) {
+	    System.out.println(pages.get(p));
+	}
     }
 }
