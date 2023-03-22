@@ -22,7 +22,7 @@ class PDFTextExtractor {
 	    // Do one page at a time
 	    for (int p = 1; p < pdDocument.getNumberOfPages(); p++) {
 		pdfTextStripper.setStartPage(p);
-		pdfTextStripper.setEndPage(p + 1);
+		pdfTextStripper.setEndPage(p+1);
 		String pageOfText = pdfTextStripper.getText(pdDocument);
 		pages.add(pageOfText);
 	    }
