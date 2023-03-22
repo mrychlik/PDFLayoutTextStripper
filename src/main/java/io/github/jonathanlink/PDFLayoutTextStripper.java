@@ -464,4 +464,20 @@ class CharacterFactory {
         this.previousTextPosition = previousTextPosition;
     }
 
+    String parsePDF(String filename) {
+	String string = null;
+	try {
+	    PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File(filename), "r"));
+	    pdfParser.parse();
+	    PDDocument pdDocument = new PDDocument(pdfParser.getDocument());
+	    PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
+	    string = pdfTextStripper.getText(pdDocument);
+	} catch (FileNotFoundException e) {
+	    e.printStackTrace();
+	} catch (IOException e) {
+	    e.printStackTrace();
+	}
+	return string;
+    }
+
 }
