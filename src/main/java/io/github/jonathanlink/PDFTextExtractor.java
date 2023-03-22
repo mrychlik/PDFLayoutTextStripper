@@ -9,6 +9,7 @@ import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import java.util.*;
+import io.github.jonathanlink.*;
 
 class PDFTextExtractor {
     public static List<String> parsePDF(String filename) {
@@ -18,12 +19,12 @@ class PDFTextExtractor {
 	    PDFParser pdfParser = new PDFParser(file);
 	    pdfParser.parse();
 	    PDDocument pdDocument = pdfParser.getPDDocument();
-	    PDFLayoutTextStripper pdfTextStripper = new PDFLayoutTextStripper();
+	    PDFLayoutTextStripper pdfLayourTextStripper = new PDFLayoutTextStripper();
 	    // Do one page at a time
 	    for (int p = 1; p <= pdDocument.getNumberOfPages(); p++) {
-		pdfTextStripper.setStartPage(p);
-		pdfTextStripper.setEndPage(p);
-		String pageOfText = pdfTextStripper.getText(pdDocument);
+		pdfLayoutTextStripper.setStartPage(p);
+		pdfLayoutTextStripper.setEndPage(p);
+		String pageOfText = pdfLayoutTextStripper.getText(pdDocument);
 		pages.add(pageOfText);
 	    }
 	    pdDocument.close();
