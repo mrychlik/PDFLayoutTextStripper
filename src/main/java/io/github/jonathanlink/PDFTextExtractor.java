@@ -32,6 +32,6 @@ class PDFTextExtractor {
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
-	return null;
+	return pages;
     }
 }
