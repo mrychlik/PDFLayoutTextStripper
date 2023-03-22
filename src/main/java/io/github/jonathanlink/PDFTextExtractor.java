@@ -20,7 +20,6 @@ class PDFTextExtractor {
 		PDDocument pdDocument = pdfParser.getPDDocument();
 		PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
 		string = pdfTextStripper.getText(pdDocument);
-		pdDocument.close();
 	    } catch (IOException e) {
 		e.printStackTrace();
 	    }
