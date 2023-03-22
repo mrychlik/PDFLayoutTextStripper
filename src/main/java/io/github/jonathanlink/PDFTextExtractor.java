@@ -17,13 +17,13 @@ class PDFTextExtractor {
 	    try {
 		PDFParser pdfParser = new PDFParser(file);
 		pdfParser.parse();
+		PDDocument pdDocument = pdfParser.getPDDocument();
+		PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
+		string = pdfTextStripper.getText(pdDocument);
+		pdDocument.close();
 	    } catch (IOException e) {
 		e.printStackTrace();
 	    }
-	    PDDocument pdDocument = pdfParser.getPDDocument();
-	    PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
-	    string = pdfTextStripper.getText(pdDocument);
-	    pdDocument.close();
 	} catch (FileNotFoundException e) {
 	    e.printStackTrace();
 	}
