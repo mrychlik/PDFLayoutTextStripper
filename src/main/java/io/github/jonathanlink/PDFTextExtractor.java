@@ -12,18 +12,22 @@ import org.apache.pdfbox.text.PDFTextStripper;
 class PDFTextExtractor {
     String parsePDF(String filename) {
 	String string = null;
-	try {
-	    PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File(filename), "r"));
-	    pdfParser.parse();
-	    PDDocument pdDocument = pdfParser.getPDDocument();
-	    PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
-	    string = pdfTextStripper.getText(pdDocument);
-	    pdDocument.close();
+	try { 
+	    RandomAccessFile file = new RandomAccessFile(new File(filename), "r");
+	    try {
+		PDFParser pdfParser = new PDFParser(file);
+		pdfParser.parse();
+		PDDocument pdDocument = pdfParser.getPDDocument();
+		PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
+		string = pdfTextStripper.getText(pdDocument);
+		pdDocument.close();
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
 	} catch (FileNotFoundException e) {
 	    e.printStackTrace();
-	} catch (IOException e) {
-	    e.printStackTrace();
 	}
+
 	return string;
     }
 }
