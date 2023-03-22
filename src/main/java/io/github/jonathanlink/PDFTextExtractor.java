@@ -20,9 +20,9 @@ class PDFTextExtractor {
 	    PDDocument pdDocument = pdfParser.getPDDocument();
 	    PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
 	    // Do one page at a time
-	    for (int p = 1; p < pdDocument.getNumberOfPages(); p++) {
+	    for (int p = 1; p <= pdDocument.getNumberOfPages(); p++) {
 		pdfTextStripper.setStartPage(p);
-		pdfTextStripper.setEndPage(p+1);
+		pdfTextStripper.setEndPage(p);
 		String pageOfText = pdfTextStripper.getText(pdDocument);
 		pages.add(pageOfText);
 	    }
