@@ -19,8 +19,10 @@ class PDFTextExtractor {
 	    PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
 	    string = pdfTextStripper.getText(pdDocument);
 	} catch (FileNotFoundException e) {
+	    pdDocument.close();
 	    e.printStackTrace();
 	} catch (IOException e) {
+	    pdDocument.close();
 	    e.printStackTrace();
 	}
 	return string;
