@@ -10,19 +10,19 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 class PDFTextExtractor {
-	String parsePDF(String filename) {
-		String string = null;
-		try {
-			PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File(filename), "r"));
-			pdfParser.parse();
-			PDDocument pdDocument = new PDDocument(pdfParser.getDocument());
-			PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
-			string = pdfTextStripper.getText(pdDocument);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return string;
+    String parsePDF(String filename) {
+	String string = null;
+	try {
+	    PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File(filename), "r"));
+	    pdfParser.parse();
+	    PDDocument pdDocument = new PDDocument(pdfParser.getDocument());
+	    PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
+	    string = pdfTextStripper.getText(pdDocument);
+	} catch (FileNotFoundException e) {
+	    e.printStackTrace();
+	} catch (IOException e) {
+	    e.printStackTrace();
 	}
+	return string;
+    }
 }
