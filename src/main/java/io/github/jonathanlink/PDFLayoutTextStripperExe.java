@@ -16,7 +16,9 @@ public class PDFLayoutTextStripperExe {
      */
     public static void main(String[] args) {
 		final String tablePDF = "samples/bus.pdf";
-		prog.parsePDF(tablePDF);
+		PDFTextExtractor pdfTextExtractor = new PDFTextExtractor();
+		String string = pdfTextExtractor.parsePDF(tablePDF);
+		System.out.println(string);
     }
 
     protected void parsePDF(String filename) {
@@ -32,6 +34,6 @@ public class PDFLayoutTextStripperExe {
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
-	System.out.println(string);
+
     }
 }
