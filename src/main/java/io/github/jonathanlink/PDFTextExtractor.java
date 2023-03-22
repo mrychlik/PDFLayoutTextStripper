@@ -7,9 +7,7 @@ import java.io.IOException;
 import org.apache.pdfbox.io.RandomAccessFile;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.text.PDFTextStripper;
 import java.util.*;
-import io.github.jonathanlink.*;
 
 class PDFTextExtractor {
     public static List<String> parsePDF(String filename) {
@@ -19,7 +17,7 @@ class PDFTextExtractor {
 	    PDFParser pdfParser = new PDFParser(file);
 	    pdfParser.parse();
 	    PDDocument pdDocument = pdfParser.getPDDocument();
-	    PDFLayoutTextStripper pdfLayourTextStripper = new PDFLayoutTextStripper();
+	    PDFLayoutTextStripper pdfLayoutTextStripper = new PDFLayoutTextStripper();
 	    // Do one page at a time
 	    for (int p = 1; p <= pdDocument.getNumberOfPages(); p++) {
 		pdfLayoutTextStripper.setStartPage(p);
