@@ -10,7 +10,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import java.util.*;
 
 class PDFTextExtractor {
-    public static List<String> parsePDF(String filename) {
+    public static ArrayList<String> parsePDF(String filename) {
 	ArrayList<String> pages = new ArrayList<String>();
 	try { 
 	    RandomAccessFile file = new RandomAccessFile(new File(filename), "r");
