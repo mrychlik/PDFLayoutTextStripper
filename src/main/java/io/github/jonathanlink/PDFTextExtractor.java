@@ -24,6 +24,7 @@ class PDFTextExtractor {
 	    e.printStackTrace();
 	} catch (IOException e) {
 	    e.printStackTrace();
-	} 
+	}
+	return null;
     }
 }
