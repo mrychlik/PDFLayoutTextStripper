@@ -17,6 +17,7 @@ import java.util.*;
 public class PDFLayoutTextStripperTest {
     String tablePDF = "samples/bus.pdf";
     String formPDF = "samples/form.pdf";
+    String mysteryPDF = "/home/marek/GitProjects/UnosDatastoreImpl/0693_TL4129.pdf";
 
     /**
      * Parse a bus schedule
@@ -40,4 +41,18 @@ public class PDFLayoutTextStripperTest {
 	}
 
     }
+
+    /**
+     * Parse a mistery content
+     */
+    @Test
+    public void parseMystery() {
+	List<String> pages = PDFTextExtractor.parsePDF(mysteryPDF);
+	for(int p=0; p<pages.size(); p++) {
+	    System.out.println(pages.get(p));
+	}
+
+    }
+
+
 }
