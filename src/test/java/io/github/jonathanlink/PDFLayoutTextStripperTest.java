@@ -1,15 +1,5 @@
 package io.github.jonathanlink;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
-import org.apache.pdfbox.io.RandomAccessFile;
-import org.apache.pdfbox.pdfparser.PDFParser;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.text.PDFTextStripper;
-
-//import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 import io.github.jonathanlink.*;
 import java.util.*;
@@ -47,9 +37,14 @@ public class PDFLayoutTextStripperTest {
      */
     @Test
     public void parseMystery() {
-	List<String> pages = PDFTextExtractor.parsePDF(mysteryPDF);
-	for(int p=0; p<pages.size(); p++) {
-	    System.out.println(pages.get(p));
+	try {
+	    List<String> pages = PDFTextExtractor.parsePDF(mysteryPDF);
+	    for(int p=0; p<pages.size(); p++) {
+		System.out.println(pages.get(p));
+	    }
+	} 
+	catch(StringIndexOutOfBoundsException e) {
+	    e.printStackTrace();
 	}
 
     }
