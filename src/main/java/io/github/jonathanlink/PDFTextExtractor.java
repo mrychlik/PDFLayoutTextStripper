@@ -9,6 +9,8 @@ import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import java.util.*;
 
+
+
 class PDFTextExtractor {
     public static List<String> parsePDF(String filename) {
 	List<String> pages = new ArrayList<String>();
