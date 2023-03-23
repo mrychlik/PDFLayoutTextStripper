@@ -24,7 +24,7 @@ public class PDFLayoutTextStripperTest {
     @Test
     public void parseTable() {
 	List<String> pages = PDFTextExtractor.parsePDF(tablePDF);
-	for(int j=0; j<pages.size(); j++) {
+	for(int p=0; p<pages.size(); p++) {
 	    System.out.println(pages.get(p));
 	}
     }
@@ -35,7 +35,7 @@ public class PDFLayoutTextStripperTest {
     @Test
     public void parseForm() {
 	List<String> pages = PDFTextExtractor.parsePDF(formPDF);
-	for(int j=0; j<pages.size(); j++) {
+	for(int p=0; p<pages.size(); p++) {
 	    System.out.println(pages.get(p));
 	}
 
