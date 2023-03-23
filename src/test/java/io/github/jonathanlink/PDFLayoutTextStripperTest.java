@@ -12,6 +12,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 //import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 import io.github.jonathanlink.*;
+import java.util.*;
 
 public class PDFLayoutTextStripperTest {
     String tablePDF = "samples/bus.pdf";
@@ -22,7 +23,10 @@ public class PDFLayoutTextStripperTest {
      */
     @Test
     public void parseTable() {
-	PDFTextExtractor.parsePDF(tablePDF);
+	List<String> pages = PDFTextExtractor.parsePDF(tablePDF);
+	for(int j=0; j<pages.size(); j++) {
+	    System.out.println(pages.get(p));
+	}
     }
 
     /**
@@ -30,6 +34,10 @@ public class PDFLayoutTextStripperTest {
      */
     @Test
     public void parseForm() {
-	PDFTextExtractor.parsePDF(formPDF);
+	List<String> pages = PDFTextExtractor.parsePDF(formPDF);
+	for(int j=0; j<pages.size(); j++) {
+	    System.out.println(pages.get(p));
+	}
+
     }
 }
