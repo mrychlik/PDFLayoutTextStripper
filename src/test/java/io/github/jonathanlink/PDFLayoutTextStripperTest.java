@@ -11,6 +11,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 
 //import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
+import io.github.jonathanlink.*;
 
 public class PDFLayoutTextStripperTest {
     String tablePDF = "samples/bus.pdf";
@@ -21,7 +22,7 @@ public class PDFLayoutTextStripperTest {
      */
     @Test
     public void parseTable() {
-	this.parsePDF(tablePDF);
+	PDFTextExtractor.parsePDF(tablePDF);
     }
 
     /**
@@ -29,22 +30,6 @@ public class PDFLayoutTextStripperTest {
      */
     @Test
     public void parseForm() {
-	this.parsePDF(formPDF);
-    }
-
-    protected void parsePDF(String filename) {
-	String string = null;
-	try {
-	    PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File(filename), "r"));
-	    pdfParser.parse();
-	    PDDocument pdDocument = new PDDocument(pdfParser.getDocument());
-	    PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
-	    string = pdfTextStripper.getText(pdDocument);
-	} catch (FileNotFoundException e) {
-	    e.printStackTrace();
-	} catch (IOException e) {
-	    e.printStackTrace();
-	}
-	System.out.println(string);
+	PDFTextExtractor.parsePDF(formPDF);
     }
 }
