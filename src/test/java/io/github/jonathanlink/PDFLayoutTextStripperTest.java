@@ -1,27 +1,23 @@
 package io.github.jonathanlink;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
-import org.apache.pdfbox.io.RandomAccessFile;
-import org.apache.pdfbox.pdfparser.PDFParser;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.text.PDFTextStripper;
-
-//import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
+import io.github.jonathanlink.*;
+import java.util.*;
 
 public class PDFLayoutTextStripperTest {
     String tablePDF = "samples/bus.pdf";
     String formPDF = "samples/form.pdf";
+    String mysteryPDF = "/home/marek/GitProjects/UNOSDatastoreImpl/0693_TL4129.pdf";
 
     /**
      * Parse a bus schedule
      */
     @Test
     public void parseTable() {
-	this.parsePDF(tablePDF);
+	List<String> pages = PDFTextExtractor.parsePDF(tablePDF);
+	for(int p=0; p<pages.size(); p++) {
+	    System.out.println(pages.get(p));
+	}
     }
 
     /**
@@ -29,22 +25,29 @@ public class PDFLayoutTextStripperTest {
      */
     @Test
     public void parseForm() {
-	this.parsePDF(formPDF);
+	List<String> pages = PDFTextExtractor.parsePDF(formPDF);
+	for(int p=0; p<pages.size(); p++) {
+	    System.out.println(pages.get(p));
+	}
+
     }
 
-    protected void parsePDF(String filename) {
-	String string = null;
+    /**
+     * Parse a mistery content
+     */
+    @Test
+    public void parseMystery() {
 	try {
-	    PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File(filename), "r"));
-	    pdfParser.parse();
-	    PDDocument pdDocument = new PDDocument(pdfParser.getDocument());
-	    PDFTextStripper pdfTextStripper = new PDFLayoutTextStripper();
-	    string = pdfTextStripper.getText(pdDocument);
-	} catch (FileNotFoundException e) {
-	    e.printStackTrace();
-	} catch (IOException e) {
+	    List<String> pages = PDFTextExtractor.parsePDF(mysteryPDF);
+	    for(int p=0; p<pages.size(); p++) {
+		System.out.println(pages.get(p));
+	    }
+	} 
+	catch(StringIndexOutOfBoundsException e) {
 	    e.printStackTrace();
 	}
-	System.out.println(string);
+
     }
+
+
 }
