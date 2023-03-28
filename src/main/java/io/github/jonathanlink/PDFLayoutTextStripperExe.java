@@ -19,7 +19,10 @@ public class PDFLayoutTextStripperExe {
 		PDFLayoutTextStripperExe.parsePDF(tablePDF);
     }
 
-    protected void parsePDF(String filename) {
+    /**
+     * @param filename
+     */
+    protected static void parsePDF(String filename) {
 	String string = null;
 	try {
 	    PDFParser pdfParser = new PDFParser(new RandomAccessFile(new File(filename), "r"));
