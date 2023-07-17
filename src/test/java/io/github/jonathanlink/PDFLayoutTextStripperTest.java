@@ -7,7 +7,7 @@ import java.util.*;
 public class PDFLayoutTextStripperTest {
     String tablePDF = "samples/bus.pdf";
     String formPDF = "samples/form.pdf";
-    String mysteryPDF = "/home/marek/Desktop/Private/JavaDS/Attachments/UNOSDatastoreImpl/0693_TL4129.pdf";
+    String mysteryPDF = "/home/marek/Desktop/Private/JavaDS/Attachments/0693_TL4129.pdf";
 
     /**
      * Parse a bus schedule
