@@ -51,8 +51,8 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
+        <maven.compiler.source>7</maven.compiler.source>
+        <maven.compiler.target>7</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
@@ -66,7 +66,11 @@
             <version>3.0.0-M4</version>
             <type>maven-plugin</type>
         </dependency>
-    
+        <dependency>
+			<groupId>avalon-framework</groupId>
+			<artifactId>avalon-framework</artifactId>
+			<version>4.1.5</version>
+		</dependency>	
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
