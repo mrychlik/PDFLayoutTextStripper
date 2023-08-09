@@ -1,3 +1,0 @@
-[submodule "commons-logging"]
-	path = commons-logging
-	url = https://github.com/apache/commons-logging
