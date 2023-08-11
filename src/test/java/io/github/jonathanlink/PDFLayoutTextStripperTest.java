@@ -1,5 +1,6 @@
 package io.github.jonathanlink;
 
+import org.apache.commons.logging.LogFactory;
 import org.junit.jupiter.api.Test;
 import io.github.jonathanlink.*;
 import java.util.*;
@@ -8,6 +9,10 @@ public class PDFLayoutTextStripperTest {
     String tablePDF = "samples/bus.pdf";
     String formPDF = "samples/form.pdf";
     String mysteryPDF = "/home/marek/Desktop/Private/JavaDS/Attachments/6916_AJGL470.pdf";
+    
+    static {
+        LogFactory.getFactory().setAttribute("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
+    }
 
     /**
      * Parse a bus schedule
