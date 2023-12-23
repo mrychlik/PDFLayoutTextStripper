@@ -19,13 +19,13 @@ public class PDFCommonsCliTrial {
         // Add option "-R" for removing all text
         Option removeAllTextOption = new Option("R", "remove-all-text", true, "Remove all text");
         removeAllTextOption.setArgs(2); // Set the number of arguments
-        removeAllTextOption.setValueSeparator('='); // Set the value separator
+        removeAllTextOption.setValueSeparator('=');
         options.addOption(removeAllTextOption);
 
         // Add option "-C" for getting character location and size
         Option getCharLocationAndSizeOption = new Option("C", "get-char-location-and-size", true, "Get character location and size");
         getCharLocationAndSizeOption.setArgs(1); // Set the number of arguments
-        getCharLocationAndSizeOption.setValueSeparator('='); // Set the value separator
+        getCharLocationAndSizeOption.setValueSeparator('=');
         options.addOption(getCharLocationAndSizeOption);
 
         // Add option "-W" for getting word location and size
