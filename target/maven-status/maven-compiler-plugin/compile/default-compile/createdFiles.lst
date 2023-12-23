@@ -1,6 +1,11 @@
+io\github\jonathanlink\RemoveAllText.class
 io\github\jonathanlink\PDFTextExtractor.class
+io\github\jonathanlink\GetWords.class
+io\github\jonathanlink\GetCharLocationAndSize.class
 io\github\jonathanlink\CharacterFactory.class
-io\github\jonathanlink\PDFLayoutTextStripperExe.class
 io\github\jonathanlink\TextLine.class
 io\github\jonathanlink\PDFLayoutTextStripper.class
 io\github\jonathanlink\Character.class
+io\github\jonathanlink\PDFCommonsCliTrial.class
+io\github\jonathanlink\GetWordLocationAndSize.class
+io\github\jonathanlink\PDFLayoutTextStripperExe.class

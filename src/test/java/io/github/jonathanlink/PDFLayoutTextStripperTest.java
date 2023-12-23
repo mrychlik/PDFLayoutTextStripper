@@ -8,7 +8,7 @@ import java.util.*;
 public class PDFLayoutTextStripperTest {
     String tablePDF = "samples/bus.pdf";
     String formPDF = "samples/form.pdf";
-    String mysteryPDF = "/home/marek/Desktop/Private/JavaDS/Attachments/6916_AJGL470.pdf";
+    String mysteryPDF = "samples/6916_AJGL470.pdf";
     
     static {
         LogFactory.getFactory().setAttribute("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");

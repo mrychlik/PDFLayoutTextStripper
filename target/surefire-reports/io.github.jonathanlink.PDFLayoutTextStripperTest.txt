@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: io.github.jonathanlink.PDFLayoutTextStripperTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.812 s - in io.github.jonathanlink.PDFLayoutTextStripperTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.345 s - in io.github.jonathanlink.PDFLayoutTextStripperTest
